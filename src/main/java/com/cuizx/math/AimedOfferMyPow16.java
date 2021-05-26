@@ -1,22 +1,28 @@
 package com.cuizx.math;
 
+import sun.util.calendar.BaseCalendar;
+
+import java.math.BigDecimal;
+import java.util.Date;
+
 public class AimedOfferMyPow16 {
     public static void main(String[] args) {
-        System.out.println(myPow(2.0, -2));
+        System.out.println(myPow(2.0f, 2147483647));
     }
-    public static double myPow(double x, int n) {
-        double ans = 1.0;
+    public static float myPow(float x, int n) {
+        long startTime = System.currentTimeMillis();
+        float ans = 1.000000f;
         while (n != 0) {
             if (n > 0) {
                 ans = ans * x;
                 n--;
-            } else if (n < 0) {
+            } else {
                 ans =  ans * (1 / x);
                 n++;
-            } else {
-                return 1;
             }
         }
+        long endTime = System.currentTimeMillis();
+        System.out.println("time ========>" + (endTime - startTime)/1000 + "s");
 
         return ans;
     }
