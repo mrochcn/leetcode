@@ -1,6 +1,5 @@
 package com.cuizx.arrays;
 
-import com.sun.jmx.snmp.SnmpNull;
 
 public class FindMaximumXOR421 {
 
