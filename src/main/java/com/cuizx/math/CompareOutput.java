@@ -15,6 +15,8 @@ public class CompareOutput {
        return a;
     }
     public  static List<String> getList() {
+        long startTime = System.currentTimeMillis();
+
         List<String> list = new LinkedList<>();
         int rightCount = 0;
         int idx = 0;
@@ -38,6 +40,9 @@ public class CompareOutput {
             for (String s : list) {
                 System.out.println(s);
             }
+            long endTime = System.currentTimeMillis();
+            System.out.println("time spend" + " " + (endTime - startTime) + "ms" );
+
             return list;
         }
         return getList();
