@@ -6,8 +6,10 @@ package com.cuizx;
  */
 public class Reverse {
     public static void main(String[] args) {
-        int x = 321;
+        int x = 321234234;
         System.out.println(reverse(x));
+        System.out.println("---------------------");
+        System.out.println(Integer.reverse(x));
     }
     public static int reverse(int x) {
         int ans = 0;
@@ -20,7 +22,7 @@ public class Reverse {
                 return 0;
             }
             ans = ans * 10 + idx;
-            x = x /10;
+            x = x / 10;
         }
 //        System.out.println(ans);
         return ans;
