@@ -4,6 +4,10 @@ import java.util.*;
 
 public class FindSecondMinimumValue671 {
 
+    public static void main(String[] args) {
+
+    }
+
     public int findSecondMinimumValue(TreeNode root) {
         List<TreeNode> list = new ArrayList<>();
         dfs(root, list);
@@ -33,5 +37,19 @@ public class FindSecondMinimumValue671 {
         }
         dfs(root.left, list);
         dfs(root.right, list);
+    }
+
+    public int findRepeatNumber(int[] nums) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int num : nums) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+        int ans = -1;
+        for (Map.Entry<Integer, Integer> integerIntegerEntry : map.entrySet()) {
+            if (integerIntegerEntry.getValue() > 1) {
+                ans = integerIntegerEntry.getKey();
+            }
+        }
+        return ans;
     }
 }
