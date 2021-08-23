@@ -1,4 +1,4 @@
 package com.cuizx.string;
 
-public class Compress {
+public class Compress443 {
 }

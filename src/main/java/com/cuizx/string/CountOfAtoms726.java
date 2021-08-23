@@ -16,6 +16,7 @@ public class CountOfAtoms726 {
                 right++;
             } if (Character.isDigit(chars[right])) {
 //                map.put()
+
             }
         }
         return null;
