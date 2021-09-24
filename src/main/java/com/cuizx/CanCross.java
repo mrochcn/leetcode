@@ -1,4 +1,10 @@
 package com.cuizx;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * A frog is crossing a river. The river is divided into some number of units, and at each unit, there may or may not exist a stone. The frog can jump on a stone, but it must not jump into the water.
  *
@@ -21,7 +27,16 @@ package com.cuizx;
  */
 public class CanCross {
     public static void main(String[] args) {
-
+        String date = "2021-09-18";
+        DateFormat format = new SimpleDateFormat("yyyyMMdd");
+        Date parse = null;
+        try {
+            parse = format.parse(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        String format1 = format.format(parse);
+        System.out.println(format1);
     }
     public static boolean canCross(int[] stones) {
         return false;
