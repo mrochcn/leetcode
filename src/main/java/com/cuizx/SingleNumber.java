@@ -1,6 +1,5 @@
 package com.cuizx;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,17 +26,16 @@ public class SingleNumber {
         singleNumber(nums);
     }
 
-    public static Integer singleNumber(int[] nums) {
+    public static void singleNumber(int[] nums) {
         Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            map.put(nums[i], map.getOrDefault(nums[i], 0) + 1);
+        for (int num : nums) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
         }
         for (Map.Entry<Integer, Integer> integerIntegerEntry : map.entrySet()) {
             if (integerIntegerEntry.getValue() == 1) {
 //                System.out.println(integerIntegerEntry.getKey());
-                return integerIntegerEntry.getKey();
+                return;
             }
         }
-        return -1;
     }
 }
