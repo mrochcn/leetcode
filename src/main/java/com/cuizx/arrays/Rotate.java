@@ -9,7 +9,8 @@ public class Rotate {
             nums[i] = i;
         }
         int k = 6;
-        System.out.println(Arrays.toString(rotate(nums, k)));
+        System.out.println("测试中文编码" + Arrays.toString(rotate(nums, k)));
+        System.out.println(System.getProperty("file.encoding"));
     }
     public static int[] rotate(int[] nums, int k) {
         int[] ans = new int[nums.length];
